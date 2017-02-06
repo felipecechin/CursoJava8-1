@@ -14,9 +14,7 @@ public class ExemploApp {
 		JOptionPane.showMessageDialog(null, "Mensagem 2");
 		JOptionPane.showMessageDialog(null, "Mensagem 3");
 		JOptionPane.showMessageDialog(null, "Mensagem 4");
-		/*
-		 * ALTERADO2
-		 */
+
 	}
 
 }
