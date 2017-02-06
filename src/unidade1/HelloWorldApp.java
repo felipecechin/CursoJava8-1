@@ -8,7 +8,9 @@ public class HelloWorldApp {
 		
 		//System.out.println("Hello World!");
 		JOptionPane.showMessageDialog(null, "Hello World!");
-		
+		/*
+		 * ALTERADO
+		 */
 	}
 
 }

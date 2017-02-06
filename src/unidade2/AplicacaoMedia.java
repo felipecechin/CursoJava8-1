@@ -28,7 +28,9 @@ public class AplicacaoMedia {
 		System.out.println("Maior valor="+maior);
 		System.out.println("Menor valor="+menor);
 		System.out.printf("Média = %.2f",media);
-
+		/*
+		 * alterado3
+		 */
 	}
 
 }
