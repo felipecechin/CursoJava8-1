@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Atividade2 {
 
 	public static void main(String[] args) {
-		int matriz[][] = new int[2][2];
+		int matriz[][] = new int[4][4];
 		int c1 = (matriz.length*matriz[0].length);
 		int indice = c1*(c1-1);
 		int vetor[] = new int[indice];
@@ -26,7 +26,7 @@ public class Atividade2 {
 					for (int y=0;y<matriz[0].length;y++) {
 							if ((i!=x) || (j!=y)) {
 								if (matriz[i][j]==matriz[x][y]) {
-									System.out.println(k+"-"+matriz[i][j]+"-"+matriz[x][y]);
+									//System.out.println(k+"-"+matriz[i][j]+"-"+matriz[x][y]);
 									vetor[k] = matriz[i][j];
 									k++;
 								}
