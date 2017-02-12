@@ -15,5 +15,6 @@ public class ExemploVariaveis {
 		x = 6;
 		y = 1000;
 		int newBillion = 1_000_000_000;
-	}
+
+		}
 }
