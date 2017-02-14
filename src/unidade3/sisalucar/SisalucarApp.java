@@ -28,7 +28,7 @@ public class SisalucarApp {
 		cliente1.cnh = "XYZ0001";
 		
 		Cliente cliente2 = new Cliente();
-		gerarRelatorioLocacao(); //datas como parametro
+		gerarRelatorioLocacao(); //datas como parametro, método estático
 	}
 	
 	public void realizarLocacao(long idCarro, long idCliente) {
