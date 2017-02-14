@@ -26,5 +26,5 @@ public class Locacao {
 	public Locacao() {
 		
 	}
-	
+	 
 }

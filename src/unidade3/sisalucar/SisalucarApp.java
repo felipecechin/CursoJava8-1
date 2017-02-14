@@ -3,8 +3,11 @@ package unidade3.sisalucar;
 import java.time.LocalDate;
 
 public class SisalucarApp {
-
+	
+	static int totalCarros = 0;
+	
 	public static void main(String[] args) {
+		
 		Carro carro1 = new Carro(); //objeto carro
 		carro1.idCarro = 1;
 		carro1.modelo = "gol";
@@ -13,6 +16,8 @@ public class SisalucarApp {
 		carro1.ano = 2013;
 		carro1.valorDiaria = 99.90f;
 		carro1.fabricante = "volkswagen";
+		SisalucarApp.totalCarros = SisalucarApp.totalCarros + 1; // ou totalCarros = totalCarros + 1;
+		
 		
 		Carro carro2 = new Carro();
 		
@@ -23,7 +28,7 @@ public class SisalucarApp {
 		cliente1.cnh = "XYZ0001";
 		
 		Cliente cliente2 = new Cliente();
-		
+		gerarRelatorioLocacao(); //datas como parametro
 	}
 	
 	public void realizarLocacao(long idCarro, long idCliente) {
@@ -36,7 +41,7 @@ public class SisalucarApp {
 		locacao.valorLocado = 2* 99.90f;
 	}
 	
-	public void gerarRelatorioLocacao(LocalDate ...datas) { //exemplo de varargs
+	public static void gerarRelatorioLocacao(LocalDate ...datas) { //exemplo de varargs
 		float totalFaturado = 2 * 99.90f;
 	}
 
