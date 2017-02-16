@@ -1,19 +1,15 @@
 package unidade3.atividade4;
 
-import java.lang.reflect.Array;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.Date;
 
 public class Pedido {
-	LocalDate date;
+	Date date;
 	String enderecoEntrega;
 	Produto produtos[];
 	Cliente cliente;
 	
-	public Pedido(LocalDate date,Cliente cliente,Produto ...produtos) {
+	public Pedido(Date date,Cliente cliente,Produto ...produtos) {
 		super();
 		this.date = date;
 		this.enderecoEntrega = cliente.endereco;
@@ -21,7 +17,7 @@ public class Pedido {
 		this.produtos = produtos;
 	}
 	
-	public String imprimirRelatorio() throws ParseException {
+	public String imprimirRelatorio() {
 		String frase1 = "O cliente "+this.cliente.nome+" comprou os produtos ";
 		String frase2 = null;
 		for (int i=0;i<this.produtos.length;i++) {
@@ -31,17 +27,8 @@ public class Pedido {
 				frase2 = frase2 + ", " + this.produtos[i].descricao;
 			}
 		}
-		String dataEmUmFormato = "2009-10-30";
-		SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
-		Date data = formato.parse(dataEmUmFormato);
-		formato.applyPattern("dd/MM/yyyy");
-		String dataFormatada = formato.format(data);
-		System.out.println(dataFormatada);
-		
-		Date dataAtual = new Date();
-		System.out.println(formato.format(dataAtual));
-		
-		String frase3 = " na data "+this.date+" para o endereço de entrega "+this.enderecoEntrega+".";
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+		String frase3 = " na data "+formato.format(this.date)+" para o endereço de entrega "+this.enderecoEntrega+".";
 		return frase1+frase2+frase3;
 	}
 	
