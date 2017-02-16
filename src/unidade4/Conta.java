@@ -4,7 +4,7 @@ public class Conta {
 	
 	//atributos
 	private int numero;
-	private double saldo;
+	protected double saldo;
 	private double limite;
 	private Cliente cliente[];
 	
@@ -30,7 +30,11 @@ public class Conta {
 			System.out.println("Não foi possível realizar a transferência");
 		}
 	}
-
+	
+	public void atualiza(double taxa) {
+		this.saldo = this.saldo + this.saldo*taxa;
+	}
+	
 	public int getNumero() {
 		return numero;
 	}
@@ -58,5 +62,8 @@ public class Conta {
 	public static void main(String[] args) {
 		Conta conta = new Conta();
 		conta.cliente = new Cliente[5]; //1 até 5
+		conta.setSaldo(1000);
+		conta.atualiza(1.5333);
+		System.out.println(conta.getSaldo());
 	}
 }

@@ -1,6 +1,6 @@
 package unidade4.sisalucar;
 
-public class Carro {
+public class Carro extends Veiculo{
 	private long idCarro;
 	private String placa;
 	private String fabricante;
@@ -90,9 +90,26 @@ public class Carro {
 		
 	}
 	
+	public int getPassageiros() { //exemplo de anulação
+		return 4;
+	}
+	
+	public void acelera(int limiteVelocidade) { //exemplo de sobrecarga
+		System.out.println("Obedeça o limite de velocidade que é:"+limiteVelocidade);
+	}
+	
+	public void abastecer(int quantidadeLitros) {
+		System.out.println("Para abastecer o carro é necessário "+quantidadeLitros);
+	}
+	
 	public static void main(String[] args) {
 		Carro carro1 = new Carro(1,"ABC-2001","Volks","Gol",2013,"azul",99.90f,Revendedor.EMANUELVEICULOS);
 		Carro carro2 = new Carro();
+		carro1.acelera();
+		carro1.freia();
+		carro1.getPassageiros();
+		carro1.getVelocidade();
+		carro1.autonomia = 40;
 	}
 	
 	
