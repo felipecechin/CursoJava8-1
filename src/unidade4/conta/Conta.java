@@ -1,4 +1,6 @@
-package unidade4;
+package unidade4.conta;
+
+import unidade4.Cliente;
 
 public class Conta {
 	

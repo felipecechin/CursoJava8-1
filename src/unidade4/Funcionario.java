@@ -13,6 +13,11 @@ public abstract class Funcionario {
 		
 		pedro.verificarTipoFuncionario(pedro);
 		antonio.verificarTipoFuncionario(antonio);
+		
+		Professor prof = new Professor();
+		Autenticavel aut = prof; //interface recebendo referência de um objeto
+		Cidadao cidadao = prof; //interface recebendo referência de um objeto
+		Contribuinte contribuinte = prof; //interface recebendo referência de um objeto
 	}
 	
 	public abstract void getBonificacao();
