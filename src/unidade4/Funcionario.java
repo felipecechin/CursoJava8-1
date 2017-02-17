@@ -1,20 +1,21 @@
 package unidade4;
 
-public class Funcionario {
+public abstract class Funcionario {
 	
 	public static void main(String[] args) {
-		Funcionario jose = new Funcionario();
-		Funcionario antonio = new Professor();
-		Funcionario andrea = new Administrativo();
-		Funcionario pedro = new Diretor();
+	
+		Funcionario antonio = new Professor(); 	//polimorfismo
+		Funcionario andrea = new Administrativo(); 	//polimorfismo
+		Funcionario pedro = new Diretor(); 	//polimorfismo
 		((Diretor)pedro).departamento = "DDE";
 		System.out.println(((Diretor)pedro).departamento);
-		
 		
 		
 		pedro.verificarTipoFuncionario(pedro);
 		antonio.verificarTipoFuncionario(antonio);
 	}
+	
+	public abstract void getBonificacao();
 	
 	public void verificarTipoFuncionario(Funcionario objeto) {
 		if (objeto instanceof Diretor) {
